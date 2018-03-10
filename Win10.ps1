@@ -2165,7 +2165,35 @@ Function Restart {
 	Restart-Computer
 }
 
+#-------------------------------------------
+###Yes/No Wall
+#-------------------------------------------
+Function YesNo {
+	<#   
+	================================================================================ 
+	========= YesNo.ps1 ======================================= 
+	================================================================================ 
+	 Author: Dan Stolts - dstolts$microsoft.com - http://ITProGuru.com 
+	================================================================================ 
+	#> 
+	# Yes/No From the command line  
+	Write-Host "======================================================================================="
+	Write-Host "You are about to run " -nonewline; Write-Host $MyInvocation.MyCommand.Name -f Magenta -nonewline; " Make sure that is on purpose"
+	Write-Host "======================================================================================="
+	Write-host "Are you sure you want to apply these settings? They likely can't be undone" -ForegroundColor Red
+		$Readhost = Read-Host " ( y / N ) " 
+		Switch ($ReadHost) 
+		 { 
+		   Y {Write-host "Yes, Unpin everything"; Write-Host "you are now unpinning everything"; pause} 
+		   N {Write-Host "Halting Script"; pause} 
+		   Default {Write-Host "Halting Script"; pause} 
+		 } 
+}
+YesNo	#continues on to the rest of the script
 
+#=========================================================================
+#===============================START=====================================
+#=========================================================================
 
 ##########
 # Parse parameters and apply tweaks
