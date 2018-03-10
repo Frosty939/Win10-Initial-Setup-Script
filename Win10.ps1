@@ -112,7 +112,7 @@ $tweaks = @(
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
 	"DisableXboxFeatures",          # "EnableXboxFeatures",
 	"DisableAdobeFlash",            # "EnableAdobeFlash",
-	# "UninstallMediaPlayer",       # "InstallMediaPlayer",
+	"UninstallMediaPlayer",         # "InstallMediaPlayer",
 	# "UninstallWorkFolders",       # "InstallWorkFolders",
 	# "InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
 	# "InstallHyperV",              # "UninstallHyperV",
@@ -132,8 +132,8 @@ $tweaks = @(
 	# "DisableIEEnhancedSecurity",  # "EnableIEEnhancedSecurity",
 
 	### Unpinning ###
-	# "UnpinStartMenuTiles",
-	# "UnpinTaskbarIcons",
+	"UnpinStartMenuTiles",
+	"UnpinTaskbarIcons",
 
 	### Auxiliary Functions ###
 	"WaitForKey",
